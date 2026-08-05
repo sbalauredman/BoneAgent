@@ -1,0 +1,7 @@
+inherits: campaign.yaml
+evaluation:
+  chemistry: bioactive_glass
+  formula_system: SiO2-CaO-Na2O-P2O5
+  retraining: false
+  report_relative_cbmd_degradation: true
+

@@ -1,0 +1,50 @@
+seed: 42
+output_directory: records
+mace:
+  hidden_channels: 128
+  message_layers: 3
+  max_ell: 2
+  correlation: 3
+  radial_functions: 8
+  cutoff_angstrom: 5.0
+  pretrain_epochs: 500
+  finetune_epochs: 200
+  pretrain_learning_rate: 0.0005
+  finetune_learning_rate: 0.0001
+  weight_decay: 0.00001
+  batch_size: 32
+  gradient_clip: 10.0
+  early_stopping_patience: 20
+cascade:
+  candidate_count: 10000
+  fem_count: 100
+  dft_count: 10
+  maximum_cycles: 10
+  minimum_cycles: 2
+  convergence_fraction: 0.01
+  convergence_cycles: 2
+  clinical_interval: 5
+  cost_ml: 1.0
+  cost_fem: 30000.0
+  cost_dft: 1400000.0
+score:
+  mechanics_weight: 0.3
+  biology_weight: 0.3
+  degradation_weight: 0.2
+  clinical_weight: 0.2
+  strength_min_mpa: 2.0
+  strength_max_mpa: 180.0
+  modulus_min_gpa: 0.1
+  modulus_max_gpa: 20.0
+  ingrowth_start_weeks: 12.0
+  ingrowth_end_weeks: 24.0
+infrastructure:
+  gpu_model: NVIDIA A100
+  gpu_count: 1
+  gpu_memory_gb: 80
+  coordinator_cpu_cores: 128
+  coordinator_memory_gb: 512
+  dft_nodes: 4
+  dft_cores_per_node: 64
+  campaign_hours: 72.0
+

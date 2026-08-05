@@ -1,0 +1,10 @@
+inherits: campaign.yaml
+ablation: clinical_feedback
+clinical:
+  enabled: false
+score:
+  mechanics_weight: 0.375
+  biology_weight: 0.375
+  degradation_weight: 0.25
+  clinical_weight: 0.0
+

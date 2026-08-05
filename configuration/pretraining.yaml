@@ -1,0 +1,35 @@
+stage: pretraining
+dataset: matbench_formation_energy
+dataset_size: 132752
+split:
+  train: 0.70
+  validation: 0.15
+  test: 0.15
+  elements_out: true
+optimizer:
+  name: Adam
+  learning_rate: 0.0005
+  weight_decay: 0.00001
+scheduler:
+  name: cosine
+  warmup_steps: 0
+training:
+  epochs: 500
+  batch_size: 32
+  gradient_accumulation: 1
+  world_size: 1
+  precision: float32
+  gradient_clip: 10.0
+  seeds: [42, 1024, 2048, 3407, 7]
+model:
+  architecture: MACE
+  version: 0.3.4
+  message_layers: 3
+  hidden_channels: 128
+  maximum_spherical_order: 2
+  correlation_order: 3
+  body_order: 4
+  radial_basis: bessel
+  radial_functions: 8
+  cutoff_angstrom: 5.0
+

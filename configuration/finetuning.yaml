@@ -1,0 +1,26 @@
+stage: calcium_phosphate_finetuning
+datasets:
+  - materials_project_cap
+  - aflow_bioceramics
+  - oqmd_cap_oxides
+dataset_size: 8217
+optimizer:
+  name: Adam
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+scheduler:
+  name: cosine
+  warmup_steps: 0
+training:
+  epochs: 200
+  batch_size: 32
+  gradient_accumulation: 1
+  world_size: 1
+  precision: float32
+  gradient_clip: 10.0
+  early_stopping:
+    metric: validation_mae
+    patience: 20
+    mode: min
+  seeds: [42, 1024, 2048, 3407, 7]
+

@@ -1,0 +1,6 @@
+inherits: campaign.yaml
+ablation: multi_agent_coordination
+coordination:
+  shared_message_bus: false
+  independent_rank_aggregation: true
+

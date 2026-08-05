@@ -1,0 +1,8 @@
+Materials Project | https://materialsproject.org
+AFLOW | https://aflow.org
+OQMD | https://www.oqmd.org/api/
+NOMAD | https://nomad-lab.eu
+Matbench | https://matbench.materialsproject.org
+ClinicalTrials.gov | https://clinicaltrials.gov/data-about-studies/learn-about-api
+PubMed | https://pubmed.ncbi.nlm.nih.gov
+PubMed Central | https://pmc.ncbi.nlm.nih.gov

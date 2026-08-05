@@ -1,0 +1,7 @@
+inherits: campaign.yaml
+evaluation:
+  chemistry: titanium_alloy
+  formula_system: Ti-6Al-4V
+  retraining: false
+  report_relative_cbmd_degradation: true
+

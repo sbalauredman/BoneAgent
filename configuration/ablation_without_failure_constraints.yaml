@@ -1,0 +1,6 @@
+inherits: campaign.yaml
+ablation: failure_constraint_learning
+clinical:
+  learn_hard_constraints: false
+  retain_outcome_score: true
+

@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools==69.1.1", "wheel==0.42.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "boneagent"
+version = "1.0.0"
+description = "Closed-loop calcium phosphate biomaterial discovery"
+requires-python = "==3.10.*"
+dependencies = [
+  "torch==2.1.2",
+  "numpy==1.26.4",
+  "scipy==1.11.4",
+  "pandas==2.1.4",
+  "pydantic==2.6.1",
+  "PyYAML==6.0.1",
+  "ase==3.22.1",
+  "pymatgen==2024.2.20",
+  "mace-torch==0.3.4",
+  "xgboost==2.0.3",
+  "scikit-learn==1.4.0",
+  "numpyro==0.13.2",
+  "jax==0.4.23",
+  "jaxlib==0.4.23",
+  "optuna==3.5.0",
+  "networkx==3.2.1",
+  "transformers==4.37.2",
+  "datasets==2.16.1",
+  "requests==2.31.0",
+  "tqdm==4.66.2"
+]
+
+[project.scripts]
+boneagent-train = "boneagent.console.train:main"
+boneagent-evaluate = "boneagent.console.evaluate:main"
+boneagent-campaign = "boneagent.console.campaign:main"
+boneagent-prepare = "boneagent.console.prepare:main"
+
+[tool.setuptools.packages.find]
+where = ["code"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_unreachable = true
+

@@ -1,0 +1,7 @@
+inherits: campaign.yaml
+ablation: multi_fidelity_digital_twin
+cascade:
+  candidate_count: 10000
+  fem_count: 0
+  dft_count: 10000
+

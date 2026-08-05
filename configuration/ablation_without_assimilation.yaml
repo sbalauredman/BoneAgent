@@ -1,0 +1,6 @@
+inherits: campaign.yaml
+ablation: kalman_data_assimilation
+clinical:
+  update_surrogate: false
+  retain_static_constraints: true
+
